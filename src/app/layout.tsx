@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: 'Test Star Wars'
 };
 
-const theme: ThemeConfig = {
+export const theme: ThemeConfig = {
   hashed: false
 };
 

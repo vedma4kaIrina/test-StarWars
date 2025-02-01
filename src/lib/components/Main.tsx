@@ -1,10 +1,11 @@
 'use client';
 
 import { List, Space } from 'antd';
-import Search from 'antd/es/input/Search';
 import { useState } from 'react';
 import Link from 'next/link';
 import { IDataPersons, IPerson } from '@/lib/types/person';
+import Search from 'antd/lib/input/Search';
+import fetch from 'node-fetch'
 
 
 const Main = ({ data }: IDataPersons) => {
@@ -39,6 +40,7 @@ const Main = ({ data }: IDataPersons) => {
         loading = {loading}
         itemLayout={'vertical'}
         size={'small'}
+        data-testid='list-antd'
         pagination={{
           onChange:  async (page) => {
             await nextPage(page);
